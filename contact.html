@@ -71,6 +71,37 @@
         </p>
 
 
+        <p>
+            <label for="color">Ange din favoritfärg:</label>
+            <input type="color" name="color" id="color">
+        </p>
+
+        <p>
+            <label for="datetime">Bästa dagen på året är...</label> <br>
+            <input type="datetime-local" name="datetime" id="datetime">
+        </p>
+
+        <!-- ett formulärelement som tillåter större textmängd (inkl radbrytning) är textarea -->
+        <p>
+            Berätta om dig själv - personligt brev<br>
+            <textarea name="letter" id="letter" cols="30" rows="10"></textarea>
+        </p>
+
+        <!-- ett element som används för att att peka ut ngt i en lista - kallas för select-option -->
+
+        <p>
+            Vilka språk föredrar du: (du kan makera flera val i listan) <br>
+
+            <!-- uppgift - ta reda på om man kan markera flera olika val i en select option lista -->
+            <!-- tips: sök  html select option  (mdn, w3c, w3schools ... )-->
+            <!-- skriv era svar i chatten - Nearby ... -->
+            <select name="languages" id="languages" multiple size="3">
+                <option value="html">HTML - HyperText Markup Language</option>
+                <option value="swedish">Svenska</option>
+                <option value="english">Engelska</option>
+                <option value="secret">Rövarspråket</option>
+            </select>
+        </p>
 
 
         <input type="submit" value="Skicka">
