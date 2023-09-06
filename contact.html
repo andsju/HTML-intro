@@ -26,9 +26,12 @@
 
 
     <!-- elementet form avnänds för att skapa forumlär - olika fält... -->
-    <!-- method post -->
-    <!-- method get -->
+    <!-- method post ska användas så långt som möjligt - med extension Live server genereras ett http 405 fel tyvärr... -->
+    <!-- method get ska undvikas, men kan användas för att testa applikationen. OBS - input type="password" skickas i klartetxt = väldigt tråkigt...!!! -->
     <form action="#" method="get">
+
+
+        <!-- vissa fält kan man göra till obligatoriska - attributet required -->
 
         <p>
             <!-- ett element som är tänkt att vara ledtext till formulärfält ät label -->
@@ -41,6 +44,31 @@
             <input type="text" name="last_name" id="last_name">    
         </p>
         
+        <p>
+            <!-- alternativt sätt att använda label element utan for attribut -->
+            <!-- se https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label -->
+            <label>Ange e-post: <br>
+                <input type="email" name="email" id="email" required>
+            </label>
+        </p>
+
+        <p>
+            <!-- önskat användarnanm...username, med attributet placeholder kan man ev skippa ledtext... -->
+            <!-- ange att fältet är obligatorisk - attributet required -->
+
+            <!-- fältets längd: minst ex 4 tecken -->
+            <input type="text" name="username" id="username" placeholder="Ditt användarnamn" required minlength="4" maxlength="8">
+        </p>
+
+
+        <!-- testa att skapa minst 2 olika fält som inte har samma type värde som vi kodat... -->
+
+        <!-- ... vi kodar igen gemensamt kl 11:15 -->
+
+        <p>
+            <label for="password">Ange lösenord</label> <br>
+            <input type="password" name="password" id="password">
+        </p>
 
 
 
