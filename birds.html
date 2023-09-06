@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fåglar</title>
+</head>
+
+<body>
+
+    
+    <header>
+        Ett sidhuvud - webbplatsen identitet, ex en bild...
+    </header>
+
+
+    <nav>
+
+        <!-- elementet pre - preformatted - ser till att blnaksteg kan skrivas efter varandra... -->
+        <pre></pre>
+            <!-- skapa länkar för att navigera mellan olika sidor -->
+
+            <!-- teknet &nbsp; non breaking space - kan användas i html för 'lite luft'  -->
+            <a href="index.html">Startsida</a> &nbsp;|&nbsp; <a href="birds.html">Om fåglar</a> &nbsp;|&nbsp; <a href="contact.html">Kontakt oss</a> 
+
+    </nav>
+
+
+
+    <h1>Fåglar</h1>
+
+    <p>
+        Här kommer en onumrerad lista på olika småfåglar.
+    </p>
+
+    <ul>
+        <li>Talgoxe</li>
+        <li>Domherre</li>
+        <li>Pilfink</li>
+    </ul>
+
+    <p>
+        En numrerad lista på fler fåglar
+    </p>
+
+    <hr>
+
+    <ol>
+        <li>Blåmes</li>
+        <li>Grönfink</li>
+        <li>Svartmes</li>
+    </ol>
+
+    <!-- Ibland vill man skapa ett innehåll i en lista som hanterar flera rader av text -->
+
+    <hr>
+
+    <ol>
+        <li>
+            <!-- en rubrik -->
+            <h3>Koltrast</h3>
+            <!-- en tillhörande text -->
+            <p>
+                En koltrast kan kännas igen på bland annat lätet - fågelsången.
+            </p>
+        </li>
+        <li>
+            <h3>Stare</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, tempore!
+            </p>
+        </li>
+    </ol>
+
+
+    <!-- en lista kan ha flera olika nivåer -->
+    <!-- se först om ni kan hitta hur man skapar en sådan lista - sök "" -->
+    <hr>
+
+    <ol>
+        <li>Sparvar
+            <ol>
+                <li>Gråsparv
+                    <ul>
+                        <li>I staden</li>
+                        <li>På landet</li>
+                        <li>Utanför mitt café</li>
+                    </ul>
+                </li>
+                <li>Gulsparv</li>
+            </ol>
+        </li>
+        <li>Finkar
+            <ol>
+                <li>Grönfink</li>
+                <li>Svartfink</li>
+                <li>Blåfink</li>
+            </ol>
+        </li>
+        <li>Mesar
+            <ol>
+                <li>Svartmes</li>
+            </ol>
+        </li>
+    </ol>
+
+
+    <!-- lägga till olika typer av medieinnehåll, ex bild, ljud, video -->
+
+    <hr>
+
+    <h3>Om Koltrasten</h3>
+    <p>
+        Så låter Turdus Merula
+    </p>
+
+
+    <!-- filer (ex ljudklipp) som du inte själv äger kan inte utan vidare användas på en webbplats -->
+    <!-- ett bra sätt att organisera olika typer av gallerier (ljud, bild, video, grafik) -->ett
+    <!-- ... är att använda elementet figure, med tillhörande figcaption -->
+
+    <!-- ett galleri -->
+
+    <!-- ett exempel på ett semantiskt omslutande element som passar här är section -->
+    <section>
+
+        <h4>Ljudfiler</h4>
+
+        <figure>
+            <!-- ett ljudklipp från en koltrast -->
+            <!-- ett ljud kan spela med elementet audio -->
+            <!-- ett exempel på en relativ sökväg -->
+            <!-- OBS - för att få 'spelkontroller' till autio elementet anges attributet 'controls' -->
+            <audio src="audio/Turdus_merula_-_Common_Blackbird_XC541784.mp3" controls></audio>
+            <figcaption>
+                <a href="https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC541784.mp3">Benoît
+                    Van
+                    Hecke</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia
+                Commons
+            </figcaption>
+        </figure>
+
+        <figure>
+            <!-- ett exempel på en absolut sökväg -->
+            <audio
+                src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Turdus_merula_-_Common_Blackbird_XC442903.mp3"
+                controls></audio>
+
+            <figcaption>
+                <a href="https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC442903.mp3">James
+                    Ray</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia
+                Commons
+            </figcaption>
+        </figure>
+
+    </section>
+
+    <!-- ett galleri med videoklipp -->
+    <section>
+        <h4>Videofiler</h4>
+        <!-- ett filmklipp kan visas med elementet video -->
+
+        <figure>
+            <video src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Turdus_merula_singing.webm" width="300" height="200" controls></video>
+            <figcaption>
+                <a href="https://commons.wikimedia.org/wiki/File:Turdus_merula_singing.webm">Larske</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons
+            </figcaption>
+        </figure>
+
+        <figure>
+            <!-- OBS - via filen .gitignore finns inte filer i mappen i versionshantering... -->
+            <video src="video/Turdus_merula_KOS.webm" width="300" controls></video>
+            <figcaption><a href="https://commons.wikimedia.org/wiki/File:2022-06-08_LJUBLJANA_Botani%C4%8Dni_vrt_PASSERIFORMES_Turdus_merula_KOS.webm">NaIzletuSi ™</a>, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>, via Wikimedia Commons</figcaption>
+        </figure>
+        <!-- uppgift: lägg till minst ett videoklipp till - om du vill kanske du kan hitta en lågullöst video och ladda ner klippet i en mapp som kan passa -->
+
+    </section>
+
+
+
+</body>
+
+</html>
