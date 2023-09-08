@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontaktformulär</title>
 </head>
+
 <body>
-    
+
     <header>
         Ett sidhuvud - webbplatsen identitet, ex en bild...
     </header>
@@ -15,10 +17,12 @@
 
         <!-- elementet pre - preformatted - ser till att blnaksteg kan skrivas efter varandra... -->
         <pre></pre>
-            <!-- skapa länkar för att navigera mellan olika sidor -->
+        <!-- skapa länkar för att navigera mellan olika sidor -->
 
-            <!-- teknet &nbsp; non breaking space - kan användas i html för 'lite luft'  -->
-            <a href="index.html">Startsida</a> &nbsp;|&nbsp; <a href="birds.html">Om fåglar</a> &nbsp;|&nbsp; <a href="contact.html">Kontakt oss</a> 
+        <!-- teknet &nbsp; non breaking space - kan användas i html för 'lite luft'  -->
+        <a href="index.html">Startsida</a> &nbsp;|&nbsp; <a href="birds.html">Om fåglar</a> &nbsp;|&nbsp; <a
+            href="contact.html">Kontakt oss</a> &nbsp;|&nbsp; <a
+            href="facts.html">Fakta</a>
 
     </nav>
 
@@ -28,7 +32,7 @@
     <!-- elementet form avnänds för att skapa forumlär - olika fält... -->
     <!-- method post ska användas så långt som möjligt - med extension Live server genereras ett http 405 fel tyvärr... -->
     <!-- method get ska undvikas, men kan användas för att testa applikationen. OBS - input type="password" skickas i klartetxt = väldigt tråkigt...!!! -->
-    <form action="#" method="get">
+    <form action="#" method="get" id="contact">
 
 
         <!-- vissa fält kan man göra till obligatoriska - attributet required -->
@@ -36,14 +40,14 @@
         <p>
             <!-- ett element som är tänkt att vara ledtext till formulärfält ät label -->
             <label for="first_name">Ditt förnamn:</label><br>
-            <input type="text" name="first_name" id="first_name">    
+            <input type="text" name="first_name" id="first_name">
         </p>
 
         <p>
             <label for="last_name">Ditt efternamn:</label><br>
-            <input type="text" name="last_name" id="last_name">    
+            <input type="text" name="last_name" id="last_name">
         </p>
-        
+
         <p>
             <!-- alternativt sätt att använda label element utan for attribut -->
             <!-- se https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label -->
@@ -57,7 +61,8 @@
             <!-- ange att fältet är obligatorisk - attributet required -->
 
             <!-- fältets längd: minst ex 4 tecken -->
-            <input type="text" name="username" id="username" placeholder="Ditt användarnamn" required minlength="4" maxlength="8">
+            <input type="text" name="username" id="username" placeholder="Ditt användarnamn" required minlength="4"
+                maxlength="8">
         </p>
 
 
@@ -95,6 +100,8 @@
             <!-- uppgift - ta reda på om man kan markera flera olika val i en select option lista -->
             <!-- tips: sök  html select option  (mdn, w3c, w3schools ... )-->
             <!-- skriv era svar i chatten - Nearby ... -->
+
+
             <select name="languages" id="languages" multiple size="3">
                 <option value="html">HTML - HyperText Markup Language</option>
                 <option value="swedish">Svenska</option>
@@ -104,7 +111,57 @@
         </p>
 
 
+
         <input type="submit" value="Skicka">
+        <input type="reset" value="Nollställ">
+        <button type="reset">Börja om</button>
+
+    </form>
+
+    <hr>
+
+    <form action="" method="get" id="newsletter">
+
+        <h3>Intresserad av nyhetsbrev?</h3>
+        <p>
+            Webbplatsen kan ge dig återkommande info i form av ett nyhetsbrev - anmäl dig här :)
+        </p>
+
+        <p>
+            <input type="email" name="email" id="email" required placeholder="Ange e-post adress för nyhetsbrev"
+                size="50">
+        </p>
+
+        <!-- jag är intresserad av ... skapa ett antal checkbox - kryssrutor -->
+
+
+        <!-- elementet fieldset kan gruppera ett eller flera element -->
+        <!-- uppgift: hur kan man skapa en ledtext till elementet fieldset  -->
+
+        <fieldset>
+            <legend>Vilka husdjur är du intresserad av</legend>
+
+            <div>
+                <input type="checkbox" name="pets_dogs" id="pets_dogs">
+                <label for="pets_dogs">Hund</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="pets_cats" id="pets_cats">
+                <label for="pets_cats">Katt</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="pets_squirrels" id="pets_squirrels">
+                <label for="pets_squirrels">Ekorre</label>
+            </div>
+
+        </fieldset>
+
+
+        <p>
+            <button type="submit">Jag vill få nyheter från webbplatsen</button>
+        </p>
 
     </form>
 
@@ -114,4 +171,5 @@
     </footer>
 
 </body>
+
 </html>
